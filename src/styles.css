@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+/* App Wrapper */
+.app-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    left: -240px; /* Position de départ hors écran */
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  
+  /* Lorsque le sidebar est activé */
+  #check:checked ~ .sidebar {
+    left: 0; /* Slide-in */
+  }
+  
+  /* Contenu principal */
+  .app-content {
+    flex: 1;
+    margin-left: 240px; /* Ajuste l'espace pour le sidebar */
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+  }
+  
+  /* Si la checkbox est décochée */
+  #check:not(:checked) ~ .app-content {
+    margin-left: 0; /* Sans sidebar */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .app-content {
+      margin-left: 0;
+    }
+  
+    #check:checked ~ .sidebar {
+      width: 100%; /* Sidebar en pleine largeur sur mobile */
+    }
+  }
+  

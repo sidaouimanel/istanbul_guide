@@ -1,0 +1,14 @@
+<div class="restaurants-container">
+    <h2 class="restaurants-title">Famous Restaurants in Istanbul</h2>
+    <div class="restaurants-list">
+      <div class="restaurant-card" *ngFor="let restaurant of restaurants">
+        <img [src]="restaurant.image" alt="{{ restaurant.name }}">
+        <div class="restaurant-card-content">
+          <h3>{{ restaurant.name }}</h3>
+          <p>{{ restaurant.address }}</p>
+          <a [href]="restaurant.googleMapsLink" target="_blank">Voir sur Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

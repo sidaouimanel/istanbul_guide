@@ -1,0 +1,25 @@
+<div class="famous-places">
+    <h1>Explore Famous Places</h1>
+    <div class="places-list">
+      <div class="place-card" *ngFor="let place of places" (click)="openModal(place)">
+        <div class="image-container">
+          <img [src]="place.image" [alt]="place.name" />
+        </div>
+        <div class="text-container">
+          <h2>{{ place.name }}</h2>
+          <p>{{ place.description }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal -->
+    <div *ngIf="selectedPlace" class="modal" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <img [src]="selectedPlace.image" [alt]="selectedPlace.name" />
+        <h2>{{ selectedPlace.name }}</h2>
+        <p>{{ selectedPlace.history }}</p>
+        <button class="close-btn" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+  
