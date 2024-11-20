@@ -6,7 +6,8 @@ import { RestaurantsComponent } from './pages/restaurants/restaurants.component'
 import { FamousPlacesComponent } from './pages/famous-places/famous-places.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProgramsComponent } from './pages/programs/programs.component';
- // Import du composant Home
+import { ActivitiesComponent } from './activities/activities.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,8 @@ const routes: Routes = [
   { path: 'places', component: FamousPlacesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'programs', component: ProgramsComponent  },
+  { path: 'activities', component: ActivitiesComponent  },
+  { path: 'aboutapp', component: AboutComponent  },
   
 ];
 

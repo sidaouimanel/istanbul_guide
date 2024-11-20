@@ -9,6 +9,8 @@ import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { FamousPlacesComponent } from './pages/famous-places/famous-places.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProgramsComponent } from './pages/programs/programs.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { AboutComponent } from './about/about.component';
  // Import du module de routage
 
 @NgModule({
@@ -20,7 +22,9 @@ import { ProgramsComponent } from './pages/programs/programs.component';
      SidebarComponent,
      FamousPlacesComponent,
      ContactComponent,
-     ProgramsComponent,   // Déclaration de HomeComponent
+     ProgramsComponent,
+     ActivitiesComponent,
+     AboutComponent,   // Déclaration de HomeComponent
   ],
   imports: [
     BrowserModule,

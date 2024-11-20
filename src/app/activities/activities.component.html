@@ -1,0 +1,30 @@
+<div class="activities-container">
+    <h2>Explore Activities in Sapanca</h2>
+    <div class="activities-grid">
+      <div class="activity-card" *ngFor="let activity of activities">
+        <img [src]="activity.image" [alt]="activity.name" class="activity-image" />
+        <div class="activity-details">
+          <h3 class="activity-name">{{ activity.name }}</h3>
+          <p class="activity-price">{{ activity.price }} TRY</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="credit">
+   
+</div>
+<button type="button" class="btn_back" [routerLink]="['/']">
+    
+    <strong>back</strong>
+    <div id="container-stars">
+      <div id="stars"></div>
+    </div>
+  
+    <div id="glow">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </button>
+  
+
+  
